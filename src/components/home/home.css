@@ -1,0 +1,12 @@
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:relative;
+    min-height: 100vh;
+}
+.intro{
+    max-width: 540px;
+    align-items: center;
+    z-index: 10;
+}
