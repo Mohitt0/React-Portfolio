@@ -1,19 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import navlogo from '../../assets/logo.svg'
 import lightlogo from '../../assets/light-logo.svg'
 import '../sidebar/sidebar.css'
 import {BiHomeAlt2} from 'react-icons/bi'
 import {TbBriefcase} from 'react-icons/tb'
-import {RiStackLine} from 'react-icons/ri'
+import {RiStackLine,RiMenu2Line, RiMoonLine} from 'react-icons/ri'
 import {AiOutlineUser} from 'react-icons/ai'
 import {IoIosContact} from 'react-icons/io'
 import {FiSun} from 'react-icons/fi'
-const Sidebar = () => {
+const Sidebar = (props) => {
+    const [toggle,showMenu] = useState(false);
     return (
         <>
-        <aside className='aside show-menu'>
+       <aside className={toggle?'aside show-menu':'aside'}>
             <a href='#home' className='nav_logo'>
-                <img src={lightlogo} alt='logo'></img>
+            <img src={props.theme==='light'? lightlogo:navlogo} alt='logo'/>
             </a>
             <nav className='nav'>
                 <div className='nav__menu'>
@@ -48,11 +49,14 @@ const Sidebar = () => {
                 </div>
             </nav>
             <div className='nav_footer'>
-                <button className='nav__link footer_button'>
-                    <FiSun/>
+                <button onClick={()=>{props.switchTheme();showMenu(!toggle)}} className='nav__link footer_button'>
+                    {props.theme==='light'?<RiMoonLine/>:<FiSun/>}
                 </button>
             </div>
         </aside>
+        <div className={toggle ? 'nav__toggle nav__toggle-open' : 'nav__toggle'} onClick={() => showMenu(!toggle)}>
+                <RiMenu2Line />
+            </div>
         </>
     );
 }
