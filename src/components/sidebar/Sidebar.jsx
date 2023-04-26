@@ -12,9 +12,9 @@ const Sidebar = (props) => {
     const [toggle,showMenu] = useState(false);
     return (
         <>
-       <aside className={toggle?'aside show-menu':'aside'}>
+        <aside className={toggle?'aside show-menu':'aside'}>
             <a href='#home' className='nav_logo'>
-            <img src={props.theme==='light'? lightlogo:navlogo} alt='logo'/>
+                <img src={props.theme==='light'? lightlogo:navlogo} alt='logo'/>
             </a>
             <nav className='nav'>
                 <div className='nav__menu'>
@@ -25,22 +25,22 @@ const Sidebar = (props) => {
                             </a>
                         </li>
                         <li className='nav__item'>
-                            <a href='#home' className='nav__link'>
+                            <a href='#about' className='nav__link'>
                                 <AiOutlineUser/>
                             </a>
                         </li>
                         <li className='nav__item'>
-                            <a href='#home' className='nav__link'>
+                            <a href='#skills' className='nav__link'>
                                 <TbBriefcase/>
                             </a>
                         </li>
                         <li className='nav__item'>
-                            <a href='#home' className='nav__link'>
+                            <a href='#project' className='nav__link'>
                                 <RiStackLine/>
                             </a>
                         </li>
                         <li className='nav__item'>
-                            <a href='#home' className='nav__link'>
+                            <a href='#contact' className='nav__link'>
                                 <IoIosContact/>
                             </a>
                         </li>

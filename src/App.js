@@ -4,6 +4,7 @@ import Sidebar from "./components/sidebar/Sidebar";
 import Home from "./components/home/Home";
 import useLocalstorage from "use-local-storage";
 import About from "./components/about/About";
+import Skills from "./components/skills/Skills";
 
 function App() {
   const defaultDark = window.matchMedia("(prefers-color-scheme:dark)").matches;
@@ -21,6 +22,7 @@ function App() {
       <main className="main">
         <Home/>
         <About/>
+        <Skills/>
       </main>
     </div>
   );

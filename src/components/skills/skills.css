@@ -1,0 +1,21 @@
+.skills_container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 3rem;
+}
+.skill_logo{
+    height: 5rem;
+    pointer-events: none;
+    max-width: 100%;
+}
+.skill_list{
+    animation-duration: 1000ms;
+    animation-timing-function: ease;
+    animation-delay: 0ms;
+    animation-name: animation-580wcl;
+    animation-direction: normal;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+}
